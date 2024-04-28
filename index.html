@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="keywords" content="مع رايتو أحصل على حلول برمجية وأنظمة برمجية مبتكرة ">
+    <meta name="description"
+        content="اكتشف حلول برمجية مبتكرة وأنظمة برمجية متخصصة تلبي احتياجات شركتك مع رايتو. نحن نقدم حلولًا مخصصة لتحسين كفاءة العمليات وزيادة الإنتاجية.">
+    <meta property="og:title" content="حلول برمجية مبتكرة وأنظمة برمجية متخصصة - شركة رايتو" />
+    <meta name="author" content="hadeer hussein">
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="assets/img/logoar.webp" />
+    <link href="assets/img/logoar.webp" rel="shortcut icon" />
+    <title>نموذج بيانات المحطات المطلوب تأهيلها </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+        rel="stylesheet">
+
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="component-content">
+        <div class="container">
+            <div class="d-flex">
+                <h4 class="title-hader">
+                    نموذج بيانات المحطات المطلوب تأهيلها
+                </h4>
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/LOGO.png" class="logo-item" alt="Logo">
+                </a>
+
+            </div>
+
+        </div>
+        <div id="multi-step-form-container">
+            <!-- Form Steps / Progress Bar -->
+            <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
+                <!-- Step 1 -->
+                <li class="form-stepper-active text-center form-stepper-list" step="1">
+                    <a class="mx-2">
+                        <span class="form-stepper-circle">
+                            <span>1</span>
+                        </span>
+                        <div class="label"> بيانات العميل</div>
+                    </a>
+                </li>
+                <!-- Step 2 -->
+                <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
+                    <a class="mx-2">
+                        <span class="form-stepper-circle text-muted">
+                            <span>2</span>
+                        </span>
+                        <div class="label text-muted"> بيانات المحطات </div>
+                    </a>
+                </li>
+
+            </ul>
+            <!-- Step Wise Form Content -->
+            <form id="userAccountSetupForm" class="form-content" name="userAccountSetupForm"
+                enctype="multipart/form-data" method="POST">
+                <!-- Step 1 Content -->
+                <section id="step-1" class="form-step">
+                    <h2 class="font-normal"> بيانات العميل</h2>
+                    <!-- Step 1 input fields -->
+                    <div class="row">
+                        <input type="text" placeholder="اسم العميل" />
+                        <input type="text" placeholder="السجل التجارى" />
+                        <input type="text" placeholder="رقم  الموبايل" />
+                        <input type="text" placeholder="رقم  واتساب" />
+                        <input type="text" placeholder="البريد الاكترونى " />
+                        <input type="text" placeholder="عدد المحطات " />
+                    </div>
+
+                    <div class="mt-3">
+                        <button class="button btn-navigate-form-step" type="button" step_number="2">التالى</button>
+
+                    </div>
+
+
+                </section>
+                <!-- Step 2 Content, default hidden on page load. -->
+                <section id="step-2" class="form-step d-none">
+                    <h2 class="font-normal"> بيانات المحطات</h2>
+                    <div class="wrapper center-block">
+                        <ul class="accordion">
+                            <li>
+                                <a>المحطة 1</a>
+                                <div class="table-content">
+                                    <div class="text-nowrap table-responsive">
+                                        <table style="width:100%">
+                                            <caption>المضخات</caption>
+
+                                            <thead style="vertical-align:bottom">
+                                                <tr>
+                                                    <th>عدد المضخات</th>
+                                                    <th>عدد الفوهات</th>
+                                                    <th>نوع المضخة</th>
+                                                    <th> نوع الوقود</th>
+                                                    <th> مرفق صورة مضخة</th>
+                                                    <th> صورة البوردة</th>
+
+                                                    <th>يوجد تمديدات أرضية</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="text" /></td>
+                                                    <td><input type="text" /></td>
+                                                    <td><input type="text" /></td>
+                                                    <td>
+                                                        <select>
+                                                            <option>90</option>
+                                                            <option>91</option>
+                                                            <option>95</option>
+                                                        </select>
+                                                    </td>
+                                                    <td>
+                                                     
+                                                        <div class="logoContainer" id="logoContainerr">
+                                                            <img src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png">
+                                                            </div>
+                                                            <div class="fileContainer sprite">
+                                                            <span>choose file</span>
+                                                            <input type="file"  value="Choose" id="filesr">
+                                                            </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="logoContainer" id="logoContainer">
+                                                            <img src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png">
+                                                            </div>
+                                                            <div class="fileContainer sprite">
+                                                            <span>choose file</span>
+                                                            <input type="file"  value="Choose" id="files">
+                                                            </div>
+                                                    </td>
+                                                    <td>
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </td>
+
+
+
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+                                        <!-- <input type="file" id="fileInput" accept="image/*" multiple>
+                                        <div id="preview"></div> -->
+                                    </div>
+
+
+                                    <div class="text-nowrap table-responsive">
+                                        <table style="width:100%">
+                                            <caption>الخزانات </caption>
+
+                                            <thead style="vertical-align:bottom">
+                                                <tr>
+                                                    <th>عدد الخزانات </th>
+
+                                                    <th> ارتفاع الخزان</th>
+                                                    <th> يوجد غرفة تفتيش</th>
+                                                    <th> عمق غرفة التفتيش عن سطح الأرض</th>
+                                                    <th> ارتفاع الخزان عن سطح الأرض</th>
+                                                    <th> فتحت بالحساسات</th>
+                                                    <th> صورة من الخزانات</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="text" /></td>
+                                                    <td><input type="text" /></td>
+                                                    <td>
+                                                        <label class="switch">
+                                                            <input type="checkbox" checked>
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="text" />
+                                                    </td>
+                                                    <td>
+                                                        <label class="switch">
+                                                            <input type="checkbox">
+                                                            <span class="slider round"></span>
+                                                        </label>
+                                                    </td>
+                                                    <td>
+                                                        <div class="logoContainer" id="logoContainer-t">
+                                                            <img src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png">
+                                                            </div>
+                                                            <div class="fileContainer sprite">
+                                                            <span>choose file</span>
+                                                            <input type="file"  value="Choose" id="files-t">
+                                                            </div>
+                                                    </td>
+
+
+
+                                                </tr>
+
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+                                </div>
+
+                            </li>
+                            <li>
+                                <a>المحطة 2</a>
+                                <div class="table-content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsum,
+                                        fuga, in, obcaecati magni ullam nobis voluptas fugiat tenetur voluptatum quas
+                                        tempora maxime rerum neque deserunt suscipit provident cumque et mollitia ex
+                                        aspernatur porro minus sapiente voluptatibus eos at perferendis repellat odit
+                                        aliquid harum molestias ratione pariatur adipisci. Aliquid, iure.</p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="mt-3">
+                        <button class="button btn-navigate-form-step button-after" type="button" step_number="1">
+                            السابق</button>
+                        <button class="button submit-btn" type="submit">حفظ</button>
+
+                    </div>
+                </section>
+
+                <form>
+        </div>
+    </div>
+    <!-- jQuery easing plugin -->
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/style.js"></script>
+</body>
+
+</html>
