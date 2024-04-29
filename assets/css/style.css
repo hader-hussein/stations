@@ -556,6 +556,12 @@ table tbody input{
  
    grid-template-columns: repeat(1, 1fr);
 }
+
+}
+@media (max-width:990px) {
+   .table-table th{
+      white-space: nowrap !important;
+   }
 }
 hr{
    border: 1px solid lightgrey;
