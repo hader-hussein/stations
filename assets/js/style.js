@@ -131,3 +131,27 @@ function readURLt(input) {
 $("#files-t").change(function(){
 	readURLt(this);
 });
+ /**********profil-img********** */
+ $("#file-history").change(function (){
+	var fileName = $(this).val();
+	if(fileName.length >0){
+$(this).parent().children('span').html(fileName);
+	}
+	else{
+		$(this).parent().children('span').html("Choose");
+
+	}
+});
+//file input preview
+function readImg(input) {
+	if (input.files && input.files[0]) {
+			var reader = new FileReader();            
+			reader.onload = function (e) {
+					$('#img-history img').attr('src', e.target.result);
+			}
+			reader.readAsDataURL(input.files[0]);
+	}
+}
+$("#file-history").change(function(){
+	readImg(this);
+});
