@@ -52,15 +52,23 @@ p{
 .pl-0 {
    padding-left: 0;
 }
+.close {
+   color: #aaaaaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+   line-height: 34px;
+ }
 .button {
-  padding: 0.5rem 1.55rem;
+  padding: 0.5rem 1.55rem !important;
   border: 1px solid #0B555E;
   background-color: #0B555E;
    color: #fff;
    border-radius: 5px;
    cursor: pointer;
    font-size: 18px;
-   font-weight: 500px;
+   font-weight: 500px !important;
+   line-height: 20px !important;
 }
 .button:hover{
 background-color: #8BC34A;
@@ -591,7 +599,7 @@ font-weight: 700;
    display: none; /* Hidden by default */
    position: fixed; /* Stay in place */
    z-index: 1; /* Sit on top */
-   padding-top: 100px; /* Location of the box */
+   padding-top: 30%; /* Location of the box */
    left: 0;
    top: 0;
    width: 100%; /* Full width */
@@ -611,13 +619,7 @@ font-weight: 700;
  }
  
  /* The Close Button */
- .close {
-   color: #aaaaaa;
-   float: right;
-   font-size: 28px;
-   font-weight: bold;
-   line-height: 34px;
- }
+
  
  .close:hover,
  .close:focus {
