@@ -203,7 +203,8 @@
                                                     </div>
                                                    
                                                     <div class="input-text">
-                                                        <input type="text" />
+                                                        <button id="myBtn" type="button">ادخل الارتفاع </button>
+
                                                         
                                                     </div>
                                                 </div>
@@ -300,12 +301,47 @@
                     </div>
                 </section>
 
-            <form>
+            </form>
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <div class="modal-hadeer">
+                        <span class="close">&times;</span>
+                        <h6 class="text-center title-model">ارتفاع الخزانات</h6>
+                    </div>
+                    <div class="modal-body">
+                        <form  class="form-content-model mt-3">
+
+                            <div class="mb-3">
+                              <label for="input-name"class="input-label">ارتفاع الخزان الاول</label>
+                              <input type="text"id="input-name"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="input-name"class="input-label">ارتفاع الخزان الثانى</label>
+                                <input type="text"id="input-name"/>
+                            </div>
+                            <div>
+                                <button class="button submit-btn" type="submit">حفظ</button>
+
+                            </div>
+                        </form>
+                    </div>
+                  
+                </div>
+              
+              </div>     
+                  
+                
+        </div>
     </div>
-    </div>
+ 
+     <!-- Modal content -->
+ 
     <!-- jQuery easing plugin -->
     <script src="./assets/js/jquery.js"></script>
     <script src="./assets/js/style.js"></script>
+    
 </body>
 
 </html>

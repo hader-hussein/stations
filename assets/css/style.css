@@ -53,7 +53,7 @@ p{
    padding-left: 0;
 }
 .button {
-  padding: 0.7rem 2rem;
+  padding: 0.5rem 1.55rem;
   border: 1px solid #0B555E;
   background-color: #0B555E;
    color: #fff;
@@ -109,7 +109,7 @@ input:focus-visible {
    margin: 30px auto;
    transition:transform 0.2s ease-in-out;
 }
-.font-normal {
+.font-normal,.title-model {
    font-weight: 600;
    font-size: 30px;
    color: #021315e1;
@@ -587,3 +587,64 @@ font-weight: 700;
  select{
    padding: 3px 8px;
  }
+ .modal {
+   display: none; /* Hidden by default */
+   position: fixed; /* Stay in place */
+   z-index: 1; /* Sit on top */
+   padding-top: 100px; /* Location of the box */
+   left: 0;
+   top: 0;
+   width: 100%; /* Full width */
+   height: 100%; /* Full height */
+   overflow: auto; /* Enable scroll if needed */
+   background-color: rgb(0,0,0); /* Fallback color */
+   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
+ 
+ /* Modal Content */
+ .modal-content {
+   background-color: #fefefe;
+   margin: auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 50%;
+ }
+ 
+ /* The Close Button */
+ .close {
+   color: #aaaaaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+   line-height: 34px;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+ }
+ #myBtn{
+   border: 0px ;
+   padding: 10px 15px;
+   background-color: #0B555E;
+   color: #fff;
+   cursor: pointer;
+   border-radius: 8px;
+   font-size: 16px;
+
+ }
+ .title-model{
+font-weight: bold;
+margin: 0px;
+font-size: 20px;
+ }
+ @media (min-width:990px) {
+   .form-content-model{
+      display: grid;
+       grid-template-columns: 1fr 1fr;
+       grid-gap: 15px;
+    }
+ }
+ 
