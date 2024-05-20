@@ -176,7 +176,6 @@ $("#file-history").change(function(){
 	   }
 	   
 	   function closePopup(event) {
-		event.preventDefault()
 		const popup = document.getElementById("myModal");
 		popup.style.display = "none";
 		
