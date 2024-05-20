@@ -627,7 +627,7 @@ font-weight: 700;
    text-decoration: none;
    cursor: pointer;
  }
- #myBtn{
+ #myBtn,.myBtn{
    border: 0px ;
    padding: 10px 15px;
    background-color: #0B555E;

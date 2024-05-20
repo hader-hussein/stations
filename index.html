@@ -193,7 +193,7 @@
                                                     </div>
                                                    
                                                     <div class="input-text">
-                                                        <input type="text" />
+                                                        <input type="text" id="input-field"/>
                                                     </div>
 
                                                 </div>
@@ -203,7 +203,7 @@
                                                     </div>
                                                    
                                                     <div class="input-text">
-                                                        <button id="myBtn" type="button">ادخل الارتفاع </button>
+                                                        <button id="myBtn" type="button" onclick="showPopup()">ادخل الارتفاع </button>
 
                                                         
                                                     </div>
@@ -301,18 +301,12 @@
                                 <h6 class="text-center title-model">ارتفاع الخزانات</h6>
                             </div>
                             <div class="modal-body">
-                                <div  class="form-content-model mt-3">
+                                <div  class="form-content-model mt-3 popup-form">
         
-                                    <div class="mb-3">
-                                      <label for="input-name"class="input-label">ارتفاع الخزان الاول(بالمتر)</label>
-                                      <input type="text"id="input-name"/>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="input-name"class="input-label">ارتفاع الخزان الثانى (بالمتر)</label>
-                                        <input type="text"id="input-name"/>
-                                    </div>
-                         
+                             
                                 </div>
+                                <button onclick="closePopup()" class="popup-close myBtn">Close</button>
+
                             </div>
                           
                         </div>
