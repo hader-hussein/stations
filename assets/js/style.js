@@ -175,9 +175,12 @@ $("#file-history").change(function(){
 		popup.style.display = "block";
 	   }
 	   
-	   function closePopup() {
+	   function closePopup(event) {
+
 		const popup = document.getElementById("myModal");
 		popup.style.display = "none";
+		event.preventDefault()
+
 	   }
 	   var span = document.getElementsByClassName("close")[0];
         span.onclick = function() {
