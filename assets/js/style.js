@@ -162,7 +162,9 @@ $("#file-history").change(function(){
 		const inputField = document.getElementById("input-field");
 		const popupForm = document.querySelector(".popup-form");
 		const numInputs = parseInt(inputField.value);
-	   
+		const inputValues = inputField.value.split(',').map(x => x.trim()).filter(x => x !== '');
+
+		const uniqueValues = [...new Set(inputValues)];
 		for (let i = 0; i < numInputs; i++) {
 		  const input = document.createElement("input");
 		  input.type = "text";
@@ -179,10 +181,41 @@ $("#file-history").change(function(){
 		const popup = document.getElementById("myModal");
 		popup.style.display = "none";
 		
-
+		const popupForm = document.querySelector(".popup-form");
+		while (popupForm.firstChild) {
+		  popupForm.removeChild(popupForm.firstChild);
+		}
+	   
+		const uniqueValues = [];
+		const inputFields = document.querySelectorAll(".popup-input");
+		for (let i = 0; i < inputFields.length; i++) {
+		  const inputValue = inputFields[i].value;
+		  if (inputValue && !inputValues.includes(inputValue)) {
+		    uniqueValues.push(inputValue);
+		    inputValues.push(inputValue);
+		  }
+		}
+	   
+		inputField.value = uniqueValues.join(', ');
 	   }
 	   var span = document.getElementsByClassName("close")[0];
         span.onclick = function() {
           myModal.style.display = 'none';
+		const popupForm = document.querySelector(".popup-form");
+		while (popupForm.firstChild) {
+		  popupForm.removeChild(popupForm.firstChild);
+		}
+	   
+		const uniqueValues = [];
+		const inputFields = document.querySelectorAll(".popup-input");
+		for (let i = 0; i < inputFields.length; i++) {
+		  const inputValue = inputFields[i].value;
+		  if (inputValue && !inputValues.includes(inputValue)) {
+		    uniqueValues.push(inputValue);
+		    inputValues.push(inputValue);
+		  }
+		}
+	   
+		inputField.value = uniqueValues.join(', ');
         }
       
