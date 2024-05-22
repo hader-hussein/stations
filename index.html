@@ -129,7 +129,7 @@ function repeatestation() {
         <details class="accordions">
                      <summary>المحطة   ${index + 0}</summary>
   
-                        <li class="accordion">
+                        <li class="accordion1">
                              
                                  <div class="table-content">
 
@@ -213,7 +213,7 @@ function repeatestation() {
                                                     </div>
                                                    
                                                     <div class="input-text">
-                                                        <input type="text" id="input-field${index}"/>
+                                                        <input type="text" id="input-field${index}" onchange="showPopup(${index})" />
                                                     </div>
 
                                                 </div>
@@ -223,7 +223,7 @@ function repeatestation() {
                                                     </div>
                                                    
                                                     <div class="input-text">
-                                                        <button id="myBtn" type="button" onclick="showPopup(${index})">ادخل الارتفاع </button>
+                                                        <button id="myBtn" type="button" onclick="displayPopup(${index})">ادخل الارتفاع </button>
 
                                                         
                                                     </div>
@@ -304,7 +304,7 @@ function repeatestation() {
                                             <div class="modal-body">
                                                 <div  class="form-content-model mt-3 popup-form" id="popup-form${index}">
                         
-                                             
+                                                
                                                 </div>
                                                 <button onclick="closePopup(${index})" class="popup-close myBtn" type="button">Close</button>
                 
@@ -349,12 +349,14 @@ function readURLt(input, idSuffix) {
 
     document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("details").forEach((accordions) => {
+    alert("add")
     accordions.addEventListener("click", (e) => {
+      
       e.currentTarget.open = !e.currentTarget.open; // Toggle the 'open' attribute
 
       document.querySelectorAll("details").forEach((event) => {
         if (accordions !== event && event.open) {
-          event.removeAttribute("open"); // Close other open accordions
+          event.setAttribute("open", false); // Close other open accordions
         }
       });
     });

@@ -104,6 +104,7 @@ $("#file-history").change(function(){
 		// const inputValues = inputField+index.value.split(',').map(x => x.trim()).filter(x => x !== '');
 
 		// const uniqueValues = [...new Set(inputValues)];
+
 		for (let i = 0; i < numInputs; i++) {
 		  const input = document.createElement("input");
 		  input.type = "text";
@@ -112,6 +113,10 @@ $("#file-history").change(function(){
 		  popupForm.appendChild(input);
 		}
 	   
+		
+	   }
+	   function displayPopup(index)
+	   {
 		const popup = document.getElementById("myModal"+`${index}`);
 		popup.style.display = "block";
 	   }
