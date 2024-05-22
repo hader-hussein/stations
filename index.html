@@ -2,114 +2,136 @@
 <html lang="ar" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="keywords" content="مع رايتو أحصل على حلول برمجية وأنظمة برمجية مبتكرة ">
-    <meta name="description"
-        content="اكتشف حلول برمجية مبتكرة وأنظمة برمجية متخصصة تلبي احتياجات شركتك مع رايتو. نحن نقدم حلولًا مخصصة لتحسين كفاءة العمليات وزيادة الإنتاجية.">
-    <meta property="og:title" content="حلول برمجية مبتكرة وأنظمة برمجية متخصصة - شركة رايتو" />
-    <meta name="author" content="hadeer hussein">
-    <meta property="og:type" content="Website" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="assets/img/logoar.webp" />
-    <link href="assets/img/logoar.webp" rel="shortcut icon" />
-    <title>نموذج بيانات المحطات المطلوب تأهيلها </title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
-        rel="stylesheet">
+  <meta name="keywords" content="مع رايتو أحصل على حلول برمجية وأنظمة برمجية مبتكرة " />
+  <meta name="description"
+    content="اكتشف حلول برمجية مبتكرة وأنظمة برمجية متخصصة تلبي احتياجات شركتك مع رايتو. نحن نقدم حلولًا مخصصة لتحسين كفاءة العمليات وزيادة الإنتاجية." />
+  <meta property="og:title" content="حلول برمجية مبتكرة وأنظمة برمجية متخصصة - شركة رايتو" />
+  <meta name="author" content="hadeer hussein" />
+  <meta property="og:type" content="Website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="assets/img/logoar.webp" />
+  <link href="assets/img/logoar.webp" rel="shortcut icon" />
+  <title>نموذج بيانات المحطات المطلوب تأهيلها</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap"
+    rel="stylesheet" />
+   
 
-    <link href="./assets/css/style.css" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet" />
 </head>
 
 <body>
-
-    <div class="component-content">
-        <div class="container">
-            <div class="d-flex">
-                <h4 class="title-hader">
-                    نموذج بيانات المحطات
-                </h4>
-                <div class="text-center">
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/img/LOGO.png" class="logo-item" alt="Logo">
-                    </a>
-                </div>
-               
-
-            </div>
-
+  <div class="component-content">
+    <div class="container">
+      <div class="d-flex">
+        <h4 class="title-hader">نموذج بيانات المحطات</h4>
+        <div class="text-center">
+          <a class="navbar-brand" href="#">
+            <img src="assets/img/LOGO.png" class="logo-item" alt="Logo" />
+          </a>
         </div>
-        <div id="multi-step-form-container">
-            <!-- Form Steps / Progress Bar -->
-            <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
-                <!-- Step 1 -->
-                <li class="form-stepper-active text-center form-stepper-list" step="1">
-                    <a class="mx-2">
-                        <span class="form-stepper-circle">
-                            <span>1</span>
-                        </span>
-                        <div class="label"> بيانات العميل</div>
-                    </a>
-                </li>
-                <!-- Step 2 -->
-                <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
-                    <a class="mx-2">
-                        <span class="form-stepper-circle text-muted">
-                            <span>2</span>
-                        </span>
-                        <div class="label text-muted"> بيانات المحطات </div>
-                    </a>
-                </li>
+      </div>
+    </div>
+    <div id="multi-step-form-container">
+      <!-- Form Steps / Progress Bar -->
+      <ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
+        <!-- Step 1 -->
+        <li class="form-stepper-active text-center form-stepper-list" step="1">
+          <a class="mx-2">
+            <span class="form-stepper-circle">
+              <span>1</span>
+            </span>
+            <div class="label">بيانات العميل</div>
+          </a>
+        </li>
+        <!-- Step 2 -->
+        <li class="form-stepper-unfinished text-center form-stepper-list" step="2">
+          <a class="mx-2">
+            <span class="form-stepper-circle text-muted">
+              <span>2</span>
+            </span>
+            <div class="label text-muted">بيانات المحطات</div>
+          </a>
+        </li>
+      </ul>
+      <!-- Step Wise Form Content -->
+      <form id="userAccountSetupForm" class="form-content" name="userAccountSetupForm" enctype="multipart/form-data"
+        method="POST">
+        <!-- Step 1 Content -->
+        <section id="step-1" class="form-step">
+          <h2 class="font-normal">بيانات العميل</h2>
+          <!-- Step 1 input fields -->
+          <div class="row">
+            <input type="text" placeholder="اسم العميل" />
 
-            </ul>
-            <!-- Step Wise Form Content -->
-            <form id="userAccountSetupForm" class="form-content" name="userAccountSetupForm"
-                enctype="multipart/form-data" method="POST">
-                <!-- Step 1 Content -->
-                <section id="step-1" class="form-step">
-                    <h2 class="font-normal"> بيانات العميل</h2>
-                    <!-- Step 1 input fields -->
-                    <div class="row">
-                        <input type="text" placeholder="اسم العميل" />
+            <input type="text" placeholder="  رقم الجوال" />
+            <input type="text" placeholder="رقم  واتساب" />
+            <input type="text" placeholder="البريد الاكترونى " />
+          </div>
+          <hr />
+          <h2 class="font-normal">بيانات الشركة</h2>
+          <div class="row">
+            <input type="text" placeholder="اسم الشركة" />
+            <input type="text" placeholder="السجل التجارى" />
+            <input type="text" id="station_num" onchange="repeatestation()" placeholder="عدد المحطات " />
+            <div>
+              <div class="logoContainer" id="img-history">
+                <img
+                  src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png" />
+              </div>
+              <div class="fileContainer sprite">
+                <span>صورة السجل</span>
+                <input type="file" value="Choose" id="file-history" />
+              </div>
+            </div>
+          </div>
+          <div class="mt-3">
+            <button class="button btn-navigate-form-step" type="button" step_number="2">
+              التالى
+            </button>
+          </div>
+        </section>
+        <!-- Step 2 Content, default hidden on page load. -->
+        <section id="step-2" class="form-step d-none">
+          <h2 class="font-normal">بيانات المحطات</h2>
+          <div class="wrapper center-block">
+            <ul class="accordion"></ul>
+          </div>
 
-                        <input type="text" placeholder="  رقم الجوال" />
-                        <input type="text" placeholder="رقم  واتساب" />
-                        <input type="text" placeholder="البريد الاكترونى " />
+          <div class="mt-3">
+            <button class="button btn-navigate-form-step button-after" type="button" step_number="1">
+              السابق
+            </button>
+            <button class="button submit-btn" type="submit">حفظ</button>
+          </div>
+        </section>
+      </form>
+    </div>
+  </div>
 
-                    </div>
-                    <hr>
-                    <h2 class="font-normal"> بيانات الشركة</h2>
-                    <div class="row">
-                        <input type="text" placeholder="اسم الشركة" />
-                        <input type="text" placeholder="السجل التجارى" />
-                        <input type="text" placeholder="عدد المحطات " />
-                        <div>
-                            <div class="logoContainer" id="img-history">
-                                <img
-                                    src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png">
-                            </div>
-                            <div class="fileContainer sprite">
-                                <span>صورة السجل</span>
-                                <input type="file" value="Choose" id="file-history">
-                            </div>
-                        </div>
+  <!-- Modal content -->
 
-                    </div>
-                    <div class="mt-3">
-                        <button class="button btn-navigate-form-step" type="button" step_number="2">التالى</button>
-
-                    </div>
+  <!-- jQuery easing plugin -->
+  <script src="./assets/js/jquery.js"></script>
+  <script src="./assets/js/style.js"></script>
+  <script>
 
 
-                </section>
-                <!-- Step 2 Content, default hidden on page load. -->
-                <section id="step-2" class="form-step d-none">
-                    <h2 class="font-normal"> بيانات المحطات</h2>
-                    <div class="wrapper center-block">
-                        <ul class="accordion">
-                                <li>
-                                    <a>المحطة 1</a>
-                                    <div class="table-content">
+//////////////////////
+
+function repeatestation() {
+    var num = $("#station_num").val();
+    var html = "";
+    for (let index = 1; index <= num; index++) {
+        html += `
+        <details class="accordions">
+                     <summary>المحطة   ${index + 0}</summary>
+  
+                        <li class="accordion">
+                             
+                                 <div class="table-content">
 
                                         <div class="row-table">
                                             <h4 class="font-normal"> المضخات</h4>
@@ -145,29 +167,27 @@
                                                 </div>
                                                 <div>
                                                     <label> مرفق صورة مضخة</label>
-
-                                                    <div class="input-text">
-                                                        <div class="logoContainer" id="logoContainerr">
-                                                            <img
-                                                                src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png">
+                                                    <div class="container-div input-text">
+                                                        <div class="form-group fileContainer files">
+                                                            <input type="file" id="files-pump-${index}" data-index="${index}" class="form-control" accept="image/*" required>
+                                                            <span class="filelabel" id="filelabel-pump-${index}">Choose</span>
                                                         </div>
-                                                        <div class="fileContainer sprite">
-                                                            <span>choose file</span>
-                                                            <input type="file" value="Choose" id="filesr">
+                                                        <div class="logo-container logoContainer" id="logoContainer-pump-${index}">
+                                                            <img src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png" alt="Logo Preview" id="logo-preview-pump-${index}">
                                                         </div>
                                                     </div>
 
                                                 </div>
                                                 <div>
                                                     <label> صورة البوردة</label>
-                                                    <div class="input-text">
-                                                        <div class="logoContainer" id="logoContainer">
-                                                            <img
-                                                                src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png">
+                                                  
+                                                    <div class="container-div input-text">
+                                                        <div class="form-group fileContainer files">
+                                                            <input type="file" id="files-board-${index}" data-index="${index}" class="form-control" accept="image/*" required>
+                                                            <span class="filelabel" id="filelabel-board-${index}">Choose</span>
                                                         </div>
-                                                        <div class="fileContainer sprite">
-                                                            <span>choose file</span>
-                                                            <input type="file" value="Choose" id="files">
+                                                        <div class="logo-container logoContainer" id="logoContainer-board-${index}">
+                                                            <img src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png" alt="Logo Preview" id="logo-preview-board-${index}">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -193,7 +213,7 @@
                                                     </div>
                                                    
                                                     <div class="input-text">
-                                                        <input type="text" id="input-field"/>
+                                                        <input type="text" id="input-field${index}"/>
                                                     </div>
 
                                                 </div>
@@ -203,7 +223,7 @@
                                                     </div>
                                                    
                                                     <div class="input-text">
-                                                        <button id="myBtn" type="button" onclick="showPopup()">ادخل الارتفاع </button>
+                                                        <button id="myBtn" type="button" onclick="showPopup(${index})">ادخل الارتفاع </button>
 
                                                         
                                                     </div>
@@ -258,81 +278,89 @@
                                                     <div>
                                                         <label> صورة من الخزانات</label>
                                                     </div>
-                                                   
-                                                    <div class="input-text">
-                                                        <div class="logoContainer" id="logoContainer-t">
-                                                            <img
-                                                                src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png">
+                                                    <div class="container-div input-text">
+                                                        <div class="form-group fileContainer files">
+                                                            <input type="file" id="files-tank-${index}" data-index="${index}" class="form-control" accept="image/*" required>
+                                                            <span class="filelabel" id="filelabel-tank-${index}">Choose</span>
                                                         </div>
-                                                        <div class="fileContainer sprite">
-                                                            <span>choose file</span>
-                                                            <input type="file" value="Choose" id="files-t">
+                                                        <div class="logo-container logoContainer" id="logoContainer-tank-${index}">
+                                                            <img src="http://img1.wikia.nocookie.net/__cb20130901213905/battlebears/images/9/98/Team-icon-placeholder.png" alt="Logo Preview" id="logo-preview-tank-${index}">
                                                         </div>
                                                     </div>
-                                                </div>
+                                                                  
+                                                
                                             </div>
 
                                         </div>
                                     </div>
+                                    <div id="myModal${index}" class="modal">
+
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <div class="modal-hadeer">
+                                               
+                                                <h6 class="text-center title-model">ارتفاع الخزانات</h6>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div  class="form-content-model mt-3 popup-form" id="popup-form${index}">
                         
-                                
+                                             
+                                                </div>
+                                                <button onclick="closePopup(${index})" class="popup-close myBtn" type="button">Close</button>
                 
-
+                                            </div>
+                                          
+                                        </div>
+                                      
+                                      </div>  
                                 </li>
-                                <li>
-                                    <a>المحطة 2</a>
-                                    <div class="table-content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, ipsum,
-                                            fuga, in, obcaecati magni ullam nobis voluptas fugiat tenetur voluptatum quas
-                                            tempora maxime rerum neque deserunt suscipit provident cumque et mollitia ex
-                                            aspernatur porro minus sapiente voluptatibus eos at perferendis repellat odit
-                                            aliquid harum molestias ratione pariatur adipisci. Aliquid, iure.</p>
-                                    </div>
-                                </li>
+                         </details>
+                   `;
+    }
+    $(".accordion").html(html);
 
-                         </ul>
-                     </div>
-                     <div id="myModal" class="modal">
+    // Attach event listeners for the newly created file inputs
+    for (let index = 1; index <= num; index++) {
+        $(`#files-pump-${index}`).on('change', function () {
+            readURLt(this, `pump-${index}`);
+        });
+        $(`#files-board-${index}`).on('change', function () {
+            readURLt(this, `board-${index}`);
+        });
+        $(`#files-tank-${index}`).on('change', function () {
+            readURLt(this, `tank-${index}`);
+        });
+    }
+}
 
-                        <!-- Modal content -->
-                        <div class="modal-content">
-                            <div class="modal-hadeer">
-                                <span class="close">&times;</span>
-                                <h6 class="text-center title-model">ارتفاع الخزانات</h6>
-                            </div>
-                            <div class="modal-body">
-                                <div  class="form-content-model mt-3 popup-form">
-        
-                             
-                                </div>
-                                <button onclick="closePopup()" class="popup-close myBtn" type="button">Close</button>
+function readURLt(input, idSuffix) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $(`#logo-preview-${idSuffix}`).attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
 
-                            </div>
-                          
-                        </div>
-                      
-                      </div>   
-                    <div class="mt-3">
-                        <button class="button btn-navigate-form-step button-after" type="button" step_number="1">
-                            السابق</button>
-                        <button class="button submit-btn" type="submit">حفظ</button>
 
-                    </div>
-                </section>
+//////////////////
+   
 
-            </form>
-             
-                  
-                
-        </div>
-    </div>
- 
-     <!-- Modal content -->
- 
-    <!-- jQuery easing plugin -->
-    <script src="./assets/js/jquery.js"></script>
-    <script src="./assets/js/style.js"></script>
-    
+    document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("details").forEach((accordions) => {
+    accordions.addEventListener("click", (e) => {
+      e.currentTarget.open = !e.currentTarget.open; // Toggle the 'open' attribute
+
+      document.querySelectorAll("details").forEach((event) => {
+        if (accordions !== event && event.open) {
+          event.removeAttribute("open"); // Close other open accordions
+        }
+      });
+    });
+  });
+});
+  </script>
 </body>
 
 </html>

@@ -379,11 +379,24 @@ ol, ul {
 		position: relative
 }
 .accordion	li	.table-content{
-	display: none;
+	/* display: none; */
 			padding: 10px 5px 30px;
-			
+		
+         
 }
-.accordion	li	a{
+
+ 
+ details > summary{
+   display: none;
+ }
+ 
+ summary {
+   background-color: #ccc;
+ }
+ .accordions{
+   border-top: 1px solid #d9e5e8;
+ }
+.accordion	li	a,.accordions summary{
 	width: 100%;
 		display: block;
 		cursor: pointer;
@@ -392,7 +405,7 @@ ol, ul {
 		font-size: 18px;
 		text-indent: 15px;
 		user-select: none;
-     
+     position: relative;
       background: linear-gradient(100deg, #0B555E, #428315cc);
       color: #fff;
 }
@@ -402,7 +415,7 @@ ol, ul {
    line-height: 2;
    padding: 10px;
 }	
-.accordion	li	a:after{
+.accordion	li	a:after ,.accordions	summary:after{
    width: 8px;
     height: 8px;
     border-right: 1px solid #fff;
@@ -418,7 +431,7 @@ ol, ul {
 }
 			
 
-a.active:after {
+a.active:after, summary:after open{
    transform: rotate(45deg) !important;
    -webkit-transition: all 0.2s ease-in-out;
    -moz-transition: all 0.2s ease-in-out;
@@ -598,7 +611,7 @@ font-weight: 700;
  select{
    padding: 3px 8px;
  }
- .modal {
+ .modal ,#myModal{
    display: none; /* Hidden by default */
    position: fixed; /* Stay in place */
    z-index: 1; /* Sit on top */
@@ -663,3 +676,5 @@ font-size: 20px;
       top:50%
    }
  }
+
+

@@ -38,99 +38,38 @@ const navigateToFormStep = (stepNumber) => {
 	    navigateToFormStep(stepNumber);
 	});
  });
- (function($) {
-	$('.accordion > li:eq(0) a').addClass('active').next().slideDown();
- 
-	$('.accordion a').click(function(j) {
-	    var dropDown = $(this).closest('li').find('.table-content');
- 
-	    $(this).closest('.accordion').find('.table-content').not(dropDown).slideUp();
- 
-	    if ($(this).hasClass('active')) {
-		   $(this).removeClass('active');
-	    } else {
-		   $(this).closest('.accordion').find('a.active').removeClass('active');
-		   $(this).addClass('active');
-	    }
- 
-	    dropDown.stop(false, true).slideToggle();
- 
-	    j.preventDefault();
-	});
- })(jQuery);
-   /**********profil-img********** */
-   $("#filesr").change(function (){
-	var fileName = $(this).val();
-	if(fileName.length >0){
-$(this).parent().children('span').html(fileName);
-	}
-	else{
-		$(this).parent().children('span').html("Choose");
 
-	}
-});
-//file input preview
-function readURLr(input) {
-	if (input.files && input.files[0]) {
-			var reader = new FileReader();            
-			reader.onload = function (e) {
-					$('#logoContainerr img').attr('src', e.target.result);
-			}
-			reader.readAsDataURL(input.files[0]);
-	}
-}
-$("#filesr").change(function(){
-	readURLr(this);
-});
-/******* */
-$("#files").change(function (){
-	var fileName = $(this).val();
-	if(fileName.length >0){
-$(this).parent().children('span').html(fileName);
-	}
-	else{
-		$(this).parent().children('span').html("Choose");
 
-	}
-});
-//file input preview
-function readURL(input) {
-	if (input.files && input.files[0]) {
-			var reader = new FileReader();            
-			reader.onload = function (e) {
-					$('#logoContainer img').attr('src', e.target.result);
-			}
-			reader.readAsDataURL(input.files[0]);
-	}
-}
-$("#files").change(function(){
-	readURL(this);
-});
-/********************* */
-/******* */
-$("#files-t").change(function (){
-	var fileName = $(this).val();
-	if(fileName.length >0){
-$(this).parent().children('span').html(fileName);
-	}
-	else{
-		$(this).parent().children('span').html("Choose");
+/***img**** */
+function changefile(index)
+{
+	var file=$('#files-t'+index);
+	
 
-	}
-});
-//file input preview
-function readURLt(input) {
-	if (input.files && input.files[0]) {
-			var reader = new FileReader();            
-			reader.onload = function (e) {
-					$('#logoContainer-t img').attr('src', e.target.result);
-			}
-			reader.readAsDataURL(input.files[0]);
-	}
 }
-$("#files-t").change(function(){
-	readURLt(this);
-});
+
+
+   function readURLt(input, index) {
+	console.log(index,input);
+	if (input.files && input.files[0]) {
+	  var reader = new FileReader();
+   
+	  reader.onload = function(e) {
+		var container = document.getElementById('logoContainer-t' + index);
+		
+		var img = document.createElement('img');
+		img.className = 'logo-preview';
+		img.src = e.target.result;
+		img.alt = 'Logo Preview';
+		img.id = 'logo-preview-t' + index;
+		container.appendChild(img);
+	//     $('#logoContainer-t'+ index).attr('src', e.target.result);
+	  }
+   
+	  reader.readAsDataURL(input.files[0]);
+	}
+   }
+ 
  /**********profil-img********** */
  $("#file-history").change(function (){
 	var fileName = $(this).val();
@@ -158,13 +97,13 @@ $("#file-history").change(function(){
 
   //modele//  
 	
-	   function showPopup() {
-		const inputField = document.getElementById("input-field");
-		const popupForm = document.querySelector(".popup-form");
+	   function showPopup(index) {
+		const inputField = document.getElementById("input-field"+index);
+		const popupForm = document.querySelector("#popup-form"+index);
 		const numInputs = parseInt(inputField.value);
-		const inputValues = inputField.value.split(',').map(x => x.trim()).filter(x => x !== '');
+		// const inputValues = inputField+index.value.split(',').map(x => x.trim()).filter(x => x !== '');
 
-		const uniqueValues = [...new Set(inputValues)];
+		// const uniqueValues = [...new Set(inputValues)];
 		for (let i = 0; i < numInputs; i++) {
 		  const input = document.createElement("input");
 		  input.type = "text";
@@ -173,12 +112,12 @@ $("#file-history").change(function(){
 		  popupForm.appendChild(input);
 		}
 	   
-		const popup = document.getElementById("myModal");
+		const popup = document.getElementById("myModal"+`${index}`);
 		popup.style.display = "block";
 	   }
 	   
-	   function closePopup(event) {
-		const popup = document.getElementById("myModal");
+	   function closePopup(index) {
+		const popup = document.getElementById("myModal"+`${index}`);
 		popup.style.display = "none";
 		
 		const popupForm = document.querySelector(".popup-form");
@@ -190,32 +129,12 @@ $("#file-history").change(function(){
 		const inputFields = document.querySelectorAll(".popup-input");
 		for (let i = 0; i < inputFields.length; i++) {
 		  const inputValue = inputFields[i].value;
-		  if (inputValue && !inputValues.includes(inputValue)) {
+		  if (inputValue && !inputValue.includes(inputValue)) {
 		    uniqueValues.push(inputValue);
-		    inputValues.push(inputValue);
+		    inputValue.push(inputValue);
 		  }
 		}
 	   
-		inputField.value = uniqueValues.join(', ');
+		inputFields.value = uniqueValues.join(', ');
 	   }
-	   var span = document.getElementsByClassName("close")[0];
-        span.onclick = function() {
-          myModal.style.display = 'none';
-		const popupForm = document.querySelector(".popup-form");
-		while (popupForm.firstChild) {
-		  popupForm.removeChild(popupForm.firstChild);
-		}
-	   
-		const uniqueValues = [];
-		const inputFields = document.querySelectorAll(".popup-input");
-		for (let i = 0; i < inputFields.length; i++) {
-		  const inputValue = inputFields[i].value;
-		  if (inputValue && !inputValues.includes(inputValue)) {
-		    uniqueValues.push(inputValue);
-		    inputValues.push(inputValue);
-		  }
-		}
-	   
-		inputField.value = uniqueValues.join(', ');
-        }
-      
+	
