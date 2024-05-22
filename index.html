@@ -352,16 +352,17 @@ function readURLt(input, idSuffix) {
     alert("add")
     accordions.addEventListener("click", (e) => {
       
-      e.currentTarget.open = !e.currentTarget.open; // Toggle the 'open' attribute
+      e.currentTarget.open = !e.currentTarget.open;
 
       document.querySelectorAll("details").forEach((event) => {
         if (accordions !== event && event.open) {
-          event.setAttribute("open", false); // Close other open accordions
+          event.removeAttribute("open");
         }
       });
     });
   });
 });
+
   </script>
 </body>
 

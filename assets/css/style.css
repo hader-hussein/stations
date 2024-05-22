@@ -379,7 +379,7 @@ ol, ul {
 		position: relative
 }
 .accordion	li	.table-content{
-	/* display: none; */
+
 			padding: 10px 5px 30px;
 		
          
@@ -431,7 +431,7 @@ ol, ul {
 }
 			
 
-a.active:after, summary:after open{
+a.active:after,details[open] summary:after {
    transform: rotate(45deg) !important;
    -webkit-transition: all 0.2s ease-in-out;
    -moz-transition: all 0.2s ease-in-out;
