@@ -99,21 +99,25 @@ $("#file-history").change(function(){
 	
 	   function showPopup(index) {
 		const inputField = document.getElementById("input-field"+index);
+		
 		const popupForm = document.querySelector("#popup-form"+index);
+		popupForm.innerHTML = "";
 		const numInputs = parseInt(inputField.value);
-		// const inputValues = inputField+index.value.split(',').map(x => x.trim()).filter(x => x !== '');
-
-		// const uniqueValues = [...new Set(inputValues)];
-
+		
+		// const inputValues = [];
 		for (let i = 0; i < numInputs; i++) {
 		  const input = document.createElement("input");
 		  input.type = "text";
 		  input.name = `input${i}`;
 		  input.placeholder = `ارتفاع الخزان ${i + 1}(بالمتر) `;
+		  input.value = "";
 		  popupForm.appendChild(input);
 		}
-	   
-		
+	     
+		   popupForm.addEventListener("submit", function(event) {
+			event.preventDefault();
+			closePopup(index, popupForm);
+		   });
 	   }
 	   function displayPopup(index)
 	   {
@@ -121,25 +125,39 @@ $("#file-history").change(function(){
 		popup.style.display = "block";
 	   }
 	   
-	   function closePopup(index) {
-		const popup = document.getElementById("myModal"+`${index}`);
-		popup.style.display = "none";
+	//    function closePopup(index) {
+	// 	const popup = document.getElementById("myModal"+`${index}`);
+	// 	popup.style.display = "none";
 		
-		const popupForm = document.querySelector(".popup-form");
-		while (popupForm.firstChild) {
-		  popupForm.removeChild(popupForm.firstChild);
-		}
+	// 	const popupForm = document.querySelector(".popup-form");
+	// 	while (popupForm.firstChild) {
+	// 	  popupForm.removeChild(popupForm.firstChild);
+	// 	}
 	   
-		const uniqueValues = [];
-		const inputFields = document.querySelectorAll(".popup-input");
-		for (let i = 0; i < inputFields.length; i++) {
-		  const inputValue = inputFields[i].value;
-		  if (inputValue && !inputValue.includes(inputValue)) {
-		    uniqueValues.push(inputValue);
-		    inputValue.push(inputValue);
+	// 	const uniqueValues = [];
+	// 	const inputFields = document.querySelectorAll(".popup-input");
+	// 	for (let i = 0; i < inputFields.length; i++) {
+	// 	  const inputValue = inputFields[i].value;
+	// 	  if (inputValue && !inputValue.includes(inputValue)) {
+	// 	    uniqueValues.push(inputValue);
+	// 	    inputValue.push(inputValue);
+	// 	  }
+	// 	}
+	   
+	// 	inputFields.value = uniqueValues.join(', ');
+	//    }
+	function closePopup(index, popupForm) {
+		const popup = document.getElementById("myModal" + `${index}`);
+		popup.style.display = "none";
+	   
+		const inputField = document.getElementById("input-field" + index);
+		const inputValues = [];
+		for (let i = 0; i < popupForm.children.length; i++) {
+		  const input = popupForm.children[i];
+		  if (input.type === "text") {
+		    inputValues.push(input.value);
 		  }
 		}
 	   
-		inputFields.value = uniqueValues.join(', ');
+		inputField.value = inputValues.join(', ');
 	   }
-	

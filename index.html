@@ -126,7 +126,7 @@ function repeatestation() {
     var html = "";
     for (let index = 1; index <= num; index++) {
         html += `
-        <details class="accordions">
+        <details class="accordions" id="accordion${index}">
                      <summary>المحطة   ${index + 0}</summary>
   
                         <li class="accordion1">
@@ -331,6 +331,19 @@ function repeatestation() {
             readURLt(this, `tank-${index}`);
         });
     }
+    document.querySelectorAll("details").forEach((accordion) => {
+  accordion.addEventListener("click", (e) => {
+    // Close all other open <details> elements
+    document.querySelectorAll("details").forEach((event) => {
+      if (event !== e.currentTarget  && event.open) {
+        event.open = false;
+      }
+    });
+
+    // Toggle the clicked <details> element
+    // e.target.open = !e.target.open;
+  });
+});
 }
 
 function readURLt(input, idSuffix) {
@@ -344,24 +357,9 @@ function readURLt(input, idSuffix) {
 }
 
 
-//////////////////
+
    
 
-    document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll("details").forEach((accordions) => {
-    alert("add")
-    accordions.addEventListener("click", (e) => {
-      
-      e.currentTarget.open = !e.currentTarget.open;
-
-      document.querySelectorAll("details").forEach((event) => {
-        if (accordions !== event && event.open) {
-          event.removeAttribute("open");
-        }
-      });
-    });
-  });
-});
 
   </script>
 </body>
